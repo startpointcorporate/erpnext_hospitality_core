@@ -26,3 +26,17 @@ visitor/read-only roles, real insert/save/delete checks, export revocation,
 System Manager customization, Guest/no-role denial, colleagues' folios and
 explicit folio User Permissions. Tests use transaction savepoints and clear
 permission caches after rollback. Do not run the suite against production sites.
+
+## Standard image validation — 2026-11-05
+
+The eight tests pass on the standard AMD64 candidate
+`docker.io/konektag/erpnext:v16.53.0-custom-validation-20261105-r2`, digest
+`sha256:a72dce05cf0346b949723854defeeb237d2402d46550cbc8d430f33e8e01ae7e`.
+The image embeds this PR's application code at
+`9ac71b36625bf555b5e3739facd8c4e89761a316`, Frappe 16.54.0 and ERPNext 16.53.0.
+Tests ran against disposable MariaDB 11.8 with the native application installed
+from the image, without an application source mount. The HTTP acceptance suite
+and official-site copies are maintained in konektag-infra PR #7; standard build,
+source locking and promotion gates are in PR #8. No production migration,
+promotion or PR merge was performed. The application code remains unchanged
+by this validation documentation update.
