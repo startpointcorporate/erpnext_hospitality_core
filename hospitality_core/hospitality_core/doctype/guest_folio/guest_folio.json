@@ -81,6 +81,7 @@
         },
         {
             "fieldname": "reserved_by",
+            "ignore_user_permissions": 1,
             "fieldtype": "Link",
             "label": "Reserved By",
             "options": "User",
