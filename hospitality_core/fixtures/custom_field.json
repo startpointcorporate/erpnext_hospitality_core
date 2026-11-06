@@ -1,0 +1,13 @@
+[
+  {
+    "doctype": "Custom Field",
+    "name": "Item-is_composite_item",
+    "dt": "Item",
+    "fieldname": "is_composite_item",
+    "label": "Is Composite Item",
+    "fieldtype": "Check",
+    "default": "0",
+    "insert_after": "is_stock_item",
+    "module": "Hospitality Core"
+  }
+]
